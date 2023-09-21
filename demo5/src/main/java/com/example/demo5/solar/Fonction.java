@@ -59,7 +59,7 @@ public class Fonction {
     }
 
     public static void signUpClient(String email, String pass) throws Exception{
-        String sql = "insert into client(email,pass,token) values ('"+email+"','"+pass+"')";
+        String sql = "insert into client(email,pass) values ('"+email+"','"+pass+"')";
         Connection connection = conn.getConn();
         Statement stmt = connection.createStatement();
         stmt.executeUpdate(sql);
